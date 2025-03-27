@@ -21,7 +21,7 @@ const HeroContent = () => {
 
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
       
-        <div className="flex flex-row items-center gap-4">
+        <div className="flex flex-row items-center gap-5">
         
           <motion.div
             initial={{ opacity: 0 }}
@@ -59,14 +59,18 @@ const HeroContent = () => {
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-1 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+          className="flex flex-col gap-6 mt-5 text-6xl font-bold text-white w-[700px] max-w-auto h-auto"
         >
           <span>
+            <span className="mr-4">
             Harshith
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-            &quot;Harsh RM&quot;
             </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+            &quot;Harsh RM&quot; 
+            </span>
+            <span className="block">
             Roopa Manjunath
+            </span>
           </span>
         </motion.div>
 
@@ -74,9 +78,10 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px] flex items-center"
         >
-          Hello there! Welcome to my Portfolio website built
+          Hello there, Welcome to my space! Built with 
 
-          <Image src="/next.png" alt="Next.js Logo" className="inline-block ml-2" width={64} height={64} />
+          <Image src="/next.png" alt="Next.js Logo" className="inline-block ml-2 mr-2" width={64} height={64} />
+          and
           <Image src="/tailwind.png" alt="Tailwind CSS Logo" className="inline-block ml-2" width={64} height={64} />
 
         </motion.p>
@@ -91,7 +96,7 @@ const HeroContent = () => {
 
       <motion.div
         variants={slideInFromRight(0.5)}
-        className="w-full h-full flex justify-center items-center ml-[200px]"
+        className="w-full h-full flex justify-center items-center ml-[360px]"
       >
         <Image
           src="/mainIconsdark.svg"
