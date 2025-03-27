@@ -62,10 +62,9 @@ const HeroContent = () => {
           className="flex flex-col gap-6 mt-1 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
-            Harshith 
+            Harshith
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              {" "}
-              "Harsh RM"{" "}
+            &quot;Harsh RM&quot;
             </span>
             Roopa Manjunath
           </span>
@@ -77,8 +76,9 @@ const HeroContent = () => {
         >
           Hello there! Welcome to my Portfolio website built
 
-          <img src="/next.png" alt="Next.js Logo" className="inline-block ml-2 w-16 h-16" /> 
-          <img src="/tailwind.png" alt="Tailwind CSS Logo" className="inline-block ml-2 w-16 h-16" />
+          <Image src="/next.png" alt="Next.js Logo" className="inline-block ml-2" width={64} height={64} />
+          <Image src="/tailwind.png" alt="Tailwind CSS Logo" className="inline-block ml-2" width={64} height={64} />
+
         </motion.p>
 
         <motion.a
