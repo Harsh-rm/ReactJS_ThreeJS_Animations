@@ -255,14 +255,14 @@
   font-family: "American Typewriter", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 }
 
-.service:nth-child(1) .serviceIcon {
-  background-color: #dd4c62;
+.serviceWrapper:nth-child(1) .serviceIcon {
+  background-color: #a33d4c;
 }
-.service:nth-child(2) .serviceIcon {
+.serviceWrapper:nth-child(2) .serviceIcon {
+  background-color: #63540d;;
+}
+.serviceWrapper:nth-child(3) .serviceIcon {
   background-color: #025656;
-}
-.service:nth-child(3) .serviceIcon {
-  background-color: #6c5c0c;
 }
 
 .counterList {
