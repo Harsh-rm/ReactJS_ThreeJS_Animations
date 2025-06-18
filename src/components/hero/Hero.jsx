@@ -8,7 +8,7 @@ import FlyingPlane from "./FlyingPlane";
 import TiltWrapper from "./TiltWrapper";
 import { Suspense } from "react";
 
-const awardVariants = {
+const descriptionVariants = {
   initial: {
     x: -100,
     opacity: 0,
@@ -40,42 +40,46 @@ const followVariants = {
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <div className="heroBackground">
+    <div className="hero container">
       <div className="hSection left">
         {/* TITLE */}
         <motion.h1
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="hTitle"
-            >
-            <span className="shimmerText">Hello there,</span>
-            <br />
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="hTitle"
+        >
+          <span className="shimmerText titleLine">Hello there,</span>
+          <span className="titleLine">
             <span className="shimmerText">I'm</span>
-            <span className="whiteText"> Harsh!</span>            
+            <span className="whiteText"> Harsh!</span>
+          </span>
+          
         </motion.h1>
 
-        {/* AWARDS */}
+        {/* Description */}
         <motion.div
-          variants={awardVariants}
+          variants={descriptionVariants}
           initial="initial"
           animate="animate"
-          className="awards"
+          className="description"
         >
-          <motion.h2 variants={awardVariants}>I'm a Professional Software Developer</motion.h2>
-          <motion.p variants={awardVariants}>
-            I have a passion for creating innovative solutions that make a difference.
+
+          <motion.h2 variants={descriptionVariants}>I'm a Professional Full-Stack Software Engineer</motion.h2>
+          <motion.p variants={descriptionVariants}>
+            I approach programming as an art—each line of code is intentional, each feature is a brushstroke, each architecture a composed piece of subtle complexity. 
           </motion.p>
-          <motion.p variants={awardVariants}>
-            With over 2 years of experience in the industry, I have honed my skills in Full Stack Development and Machine Learning.
+          
+          <motion.p variants={descriptionVariants}>
+            As Donald Knuth eloquently put it:
           </motion.p>
-          <motion.p variants={awardVariants}>
-            Bachelor's and Master's Degree in Computer Science and Engineering
+          <motion.p variants={descriptionVariants}>
+            “When you write a program, think of it primarily as a work of literature… You’re trying to write something that human beings are going to read.”
           </motion.p>
-          <motion.p variants={awardVariants}>
-            Graduate Certificate in Machine Learning at Stevens Institute of Technology
-          </motion.p>
+
         </motion.div>
+
         {/* SCROLL SVG */}
         <motion.a
           animate={{ y: [0, 5], opacity: [0, 1, 0] }}
@@ -114,6 +118,7 @@ const Hero = () => {
           </svg>
         </motion.a>
       </div>
+
       <div className="hSection right">
         {/* FOLLOW */}
         <motion.div
@@ -122,19 +127,37 @@ const Hero = () => {
           animate="animate"
           className="follow"
         >
-          <motion.a variants={followVariants} href="/">
-            <img src="/LI-In-Bug.png" alt="" />
+          <motion.a variants={followVariants} 
+            href="https://www.linkedin.com/in/harsh-rm1998/"
+            target="_blank"
+            rel="noopener noreferrer" >
+
+            <img src="/LI-In-Bug.png" alt="LinkedIn" />
+
           </motion.a>
-          <motion.a variants={followVariants} href="/">
-            <img src="/github-mark-white.png" alt="" />
+          <motion.a variants={followVariants} 
+            href="https://github.com/Harsh-rm/"
+            target="_blank"
+            rel="noopener noreferrer" >
+
+            <img src="/github-mark-white.png" alt="GitHub" />
+
           </motion.a>
-          <motion.a variants={followVariants} href="/">
-            <img src="/leetcode.png" alt="" />
+          <motion.a variants={followVariants} 
+            href="https://discord.gg/bNZ9TM67sj" 
+            target="_blank"
+            rel="noopener noreferrer" >
+
+            <img src="/Discord-Symbol-Blurple.svg" alt="Discord" />
+
           </motion.a>
           <motion.div variants={followVariants} className="followTextContainer">
-            <div className="followText">LET'S CONNECT</div>
+            <div className="followText">
+              LET'S<span className="spaceSpan"></span>CONNECT
+            </div>
           </motion.div>
         </motion.div>
+
         {/* CERTIFICATE */}
         <motion.div
           animate={{ opacity: [0, 1] }}
@@ -212,17 +235,29 @@ const Hero = () => {
         </motion.a>
       </div>
       <div className="bg">
-        {/* 3d */}
-        <Canvas className="shapeCanvas">
-          <Suspense fallback="loading...">
-            <Shape />
-            <FlyingPlane startY={7} startZ={-4} speed={0.043} size={40} />
-            <FlyingPlane startY={6.6} startZ={-5} speed={0.04} size={50} />
-          </Suspense>
-        </Canvas>
+          <Canvas className="shapeCanvas z-0">
+            <Suspense fallback={null}>
+              <Shape />
+            </Suspense>
+          </Canvas>
+        </div>
 
-        <div className="hImg">
-          <img src="/hero.png" alt="" />
+        {/* FOREGROUND PLANES */}
+        <div className="absolute top-0 left-0 w-full h-full z-3 pointer-events-none">
+          <Canvas className="w-full h-full">
+            <Suspense fallback={null}>
+              <FlyingPlane startY={6.6} startZ={-4} speed={0.043} size={270} />
+              <FlyingPlane startY={6.2} startZ={-5} speed={0.04} size={360} />
+            </Suspense>
+          </Canvas>
+        </div>
+
+        {/* MAIN HERO CONTENT */}
+        <div className="hero">
+          <div className="hImg">
+            <img src="/hero.png" alt="My Image in Ghibli style" />
+          </div>
+
         </div>
       </div>
     </div>

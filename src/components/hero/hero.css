@@ -1,7 +1,28 @@
+.heroBackground {
+  position: relative;
+  width: 100;
+  min-height: 100vh;
+
+  background-image: url('/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  align-items: center;
+}
+
 .hero {
+  color: white;
+  font-family: 'American Typewriter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  min-height: 100vh;
+  overflow-x: hidden;
+
   height: 100%;
-  overflow: hidden;
   display: flex;
+  overflow: hidden;
 }
 
 .bg {
@@ -10,17 +31,17 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .shapeCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    pointer-events: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: auto;
 }
   
 .hImg {
@@ -41,107 +62,128 @@
 }
 
 .hSection {
-  width: 80%;
+  flex: 1;
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-  
-  .hTitle {
-    margin-top: 60px;
-    font-size: 100px;
-    font-family: 'Playfair Display', serif;
-  }
-  
-  .shimmerText {
-    display: inline-block;
-    background: linear-gradient(90deg, #f77a8e, orange, #f77a8e);
-    background-size: 300% auto;
-    background-position: 0% center;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 10s linear infinite;
-  }
-  
-  @keyframes shimmer {
-    0% {
-      background-position: 300% center;
-    }
-    100% {
-      background-position: -300% center;
-    }
-  }
-  
-  .whiteText {
-    color: white;
-  }
-  
-.awards {
-  width: 60%;
-  height: 30%;
+  justify-content: flex-start;
+  gap: 70px;
 }
 
-.awards p {
+.hSection.left {
+  align-items: start;
+  z-index: 5;
+}
+
+.hSection.right {
+  align-items: end;
+  z-index: 5;
+}
+  
+.hTitle {
+  margin-top: 60px;
+  font-size: 100px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+}
+
+.titleLine {
+  display: block;
+  line-height: 1.1; /* Adjust this value to reduce gap */
+}
+
+.shimmerText {
+  display: inline-block;
+  background: linear-gradient(90deg, #f77a8e, orange, #f77a8e);
+  background-size: 300% auto;
+  background-position: 0% center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 10s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 300% center;
+  }
+  100% {
+    background-position: -300% center;
+  }
+}
+
+.whiteText {
+  color: white;
+}
+  
+.description {
+  width: 70%;
+  height: 30%;
+  margin-top: 10px;
+}
+
+.description h2 {
+  font-size: 23px;
+  color: #3d1444;
+  margin: 0px 0px;
+  font-family: 'Playfair Display', serif, sans-serif;
+  font-weight: 540;
+}
+
+.description p {
   font-size: 18px;
   color: #ddd;
   margin: 8px 0px;
 }
 
-.awardList {
-  display: flex;
-  gap: 8px;
-}
-
-.awardList img {
-  width: 36px;
-  height: 36px;
-  padding: 8px;
-  background-color: white;
-  border-radius: 100%;
-}
-
 .scroll {
-  margin-bottom: 50px;
+  margin-top: 50px;
   width: max-content;
 }
 
-.hSection.right {
-  align-items: end;
-}
-
 .follow {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 16px;
+  gap: 16px;
+  padding: 14px;
   background-color: #2f204e;
   border-bottom-right-radius: 10px;
+  z-index: 5;
 }
 
 .follow img {
   width: 20px;
   height: 20px;
+  z-index: 5;
 }
 
 .followTextContainer {
   width: 20px;
   height: 20px;
+  z-index: 5;
 }
 
 .followText {
   background-color: #dd4c62;
   font-size: 12px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  color: black;
   rotate: 90deg;
   width: max-content;
   height: 100%;
   transform-origin: left top;
   transform: translateY(-20px);
-  padding: 0 8px;
-  display: flex;
+  padding: 8px 10px;
+  display: inline-flex;
   align-items: center;
   border-bottom-right-radius: 10px;
+}
+
+.spaceSpan {
+  display: inline-flex;
+  width: 7px;
 }
 
 .certificate {
@@ -155,6 +197,7 @@
   font-weight: 300;
   color: #ddd;
   perspective: 1000px;
+  z-index: 3;
 }
 
 .certificate img {
@@ -245,7 +288,7 @@
     font-size: 88px;
   }
 
-  .awards {
+  .description {
     width: 60%;
   }
 
@@ -255,6 +298,10 @@
 }
 
 @media (max-width: 1024px) {
+  .heroBackground {
+    background-attachment: scroll; /* fallback */
+  }
+  
   .bg {
     height: 50%;
   }
@@ -265,6 +312,10 @@
 }
 
 @media (max-width: 768px) {
+  .heroBackground {
+    background-attachment: scroll; /* fallback */
+  }
+
   .hero {
     flex-direction: column;
   }
@@ -287,12 +338,12 @@
     font-size: 48px;
   }
 
-  .awards {
-    width: 100%;
+  .titleLine {
+    margin-bottom: 12px;
   }
 
-  .awardList {
-    justify-content: center;
+  .description {
+    width: 60%;
   }
 
   .hSection.right {
@@ -306,4 +357,3 @@
         display: none;
     }
   }
- 

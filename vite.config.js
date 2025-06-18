@@ -1,11 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   build: {
-    chunkSizeWarningLimit: 1500, // Optional: increases chunk size threshold
+    chunkSizeWarningLimit: 1500,
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -16,8 +22,8 @@ export default defineConfig({
               .split('/')[0]
               .toString();
           }
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 })
