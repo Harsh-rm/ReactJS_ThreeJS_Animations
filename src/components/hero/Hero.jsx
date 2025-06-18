@@ -67,15 +67,20 @@ const Hero = () => {
         >
 
           <motion.h2 variants={descriptionVariants}>I'm a Professional Full-Stack Software Engineer</motion.h2>
-          <motion.p variants={descriptionVariants}>
+          <motion.p style={{ marginBottom: '1.5rem' }} variants={descriptionVariants}>
             I approach programming as an art—each line of code is intentional, each feature is a brushstroke, each architecture a composed piece of subtle complexity. 
           </motion.p>
           
           <motion.p variants={descriptionVariants}>
             As Donald Knuth eloquently put it:
           </motion.p>
-          <motion.p variants={descriptionVariants}>
+          <motion.p style={{ marginBottom: '1.5rem' }} variants={descriptionVariants}>
             “When you write a program, think of it primarily as a work of literature… You’re trying to write something that human beings are going to read.”
+          </motion.p>
+
+          <motion.p variants={descriptionVariants}>
+            Feel free to connect with me on LinkedIn. The fastest way to
+            <span className="block">reach  me is by shooting a text on the contact page.</span>
           </motion.p>
 
         </motion.div>

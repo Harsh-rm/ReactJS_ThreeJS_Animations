@@ -1,0 +1,354 @@
+.services {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.sSection {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sTitle {
+  font-size: 88px;
+  margin: 0;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.sTitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.sTitleSubContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.sLottie {
+  width: 68px;
+  height: 88px;
+  transform: translateY(10px);
+  display: inline-block;
+  vertical-align: middle;
+  overflow: visible;
+}
+
+.spendWord {
+  position: relative;
+  z-index: 1;
+}
+
+.spendWordWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.flyingDollar {
+  width: 48px;
+  height: 48px;
+}
+
+.flyingDollarContainer {
+  position: absolute;
+  left: -30px;      /* start a bit left */
+  top: 60px;        /* well below the "s" to test */
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  z-index: 2;
+  animation: flyAcrossSpend 4s ease-in-out infinite;
+}
+@keyframes flyAcrossSpend {
+  0%   { transform: translate(0px, 0px); opacity: 0; }
+  1%   { transform: translate(2.55px, -0.8px); opacity: 0.1; }
+  2%   { transform: translate(5.1px, -1.6px); opacity: 0.2; }
+  3%   { transform: translate(7.65px, -2.4px); opacity: 0.3; }
+  4%   { transform: translate(10.2px, -3.2px); opacity: 0.4; }
+  5%   { transform: translate(12.75px, -4px); opacity: 0.5; }
+  6%   { transform: translate(15.3px, -4.8px); opacity: 0.6; }
+  7%   { transform: translate(17.85px, -5.6px); opacity: 0.7; }
+  8%   { transform: translate(20.4px, -6.4px); opacity: 0.8; }
+  9%   { transform: translate(22.95px, -7.2px); opacity: 0.9; }
+  10%  { transform: translate(25.5px, -8px); opacity: 1; }
+  11%  { transform: translate(28.05px, -8.8px); }
+  12%  { transform: translate(30.6px, -9.6px); }
+  13%  { transform: translate(33.15px, -10.4px); }
+  14%  { transform: translate(35.7px, -11.2px); }
+  15%  { transform: translate(38.25px, -12px); }
+  16%  { transform: translate(40.8px, -12.8px); }
+  17%  { transform: translate(43.35px, -13.6px); }
+  18%  { transform: translate(45.9px, -14.4px); }
+  19%  { transform: translate(48.45px, -15.2px); }
+  20%  { transform: translate(51px, -16px); }
+  21%  { transform: translate(53.55px, -16.8px); }
+  22%  { transform: translate(56.1px, -17.6px); }
+  23%  { transform: translate(58.65px, -18.4px); }
+  24%  { transform: translate(61.2px, -19.2px); }
+  25%  { transform: translate(63.75px, -20px); }
+  26%  { transform: translate(66.3px, -20.8px); }
+  27%  { transform: translate(68.85px, -21.6px); }
+  28%  { transform: translate(71.4px, -22.4px); }
+  29%  { transform: translate(73.95px, -23.2px); }
+  30%  { transform: translate(76.5px, -24px); }
+  31%  { transform: translate(79.05px, -24.8px); }
+  32%  { transform: translate(81.6px, -25.6px); }
+  33%  { transform: translate(84.15px, -26.4px); }
+  34%  { transform: translate(86.7px, -27.2px); }
+  35%  { transform: translate(89.25px, -28px); }
+  36%  { transform: translate(91.8px, -28.8px); }
+  37%  { transform: translate(94.35px, -29.6px); }
+  38%  { transform: translate(96.9px, -30.4px); }
+  39%  { transform: translate(99.45px, -31.2px); }
+  40%  { transform: translate(102px, -32px); }
+  41%  { transform: translate(104.55px, -32.8px); }
+  42%  { transform: translate(107.1px, -33.6px); }
+  43%  { transform: translate(109.65px, -34.4px); }
+  44%  { transform: translate(112.2px, -35.2px); }
+  45%  { transform: translate(114.75px, -36px); }
+  46%  { transform: translate(117.3px, -36.8px); }
+  47%  { transform: translate(119.85px, -37.6px); }
+  48%  { transform: translate(122.4px, -38.4px); }
+  49%  { transform: translate(124.95px, -39.2px); }
+  50%  { transform: translate(127.5px, -40px); }
+  51%  { transform: translate(130.05px, -40.8px); }
+  52%  { transform: translate(132.6px, -41.6px); }
+  53%  { transform: translate(135.15px, -42.4px); }
+  54%  { transform: translate(137.7px, -43.2px); }
+  55%  { transform: translate(140.25px, -44px); }
+  56%  { transform: translate(142.8px, -44.8px); }
+  57%  { transform: translate(145.35px, -45.6px); }
+  58%  { transform: translate(147.9px, -46.4px); }
+  59%  { transform: translate(150.45px, -47.2px); }
+  60%  { transform: translate(153px, -48px); }
+  61%  { transform: translate(155.55px, -48.8px); }
+  62%  { transform: translate(158.1px, -49.6px); }
+  63%  { transform: translate(160.65px, -50.4px); }
+  64%  { transform: translate(163.2px, -51.2px); }
+  65%  { transform: translate(165.75px, -52px); }
+  66%  { transform: translate(168.3px, -52.8px); }
+  67%  { transform: translate(170.85px, -53.6px); }
+  68%  { transform: translate(173.4px, -54.4px); }
+  69%  { transform: translate(175.95px, -55.2px); }
+  70%  { transform: translate(178.5px, -56px); }
+  71%  { transform: translate(181.05px, -56.8px); }
+  72%  { transform: translate(183.6px, -57.6px); }
+  73%  { transform: translate(186.15px, -58.4px); }
+  74%  { transform: translate(188.7px, -59.2px); }
+  75%  { transform: translate(191.25px, -60px); }
+  76%  { transform: translate(193.8px, -60.8px); }
+  77%  { transform: translate(196.35px, -61.6px); }
+  78%  { transform: translate(198.9px, -62.4px); }
+  79%  { transform: translate(201.45px, -63.2px); }
+  80%  { transform: translate(204px, -64px); }
+  81%  { transform: translate(206.55px, -64.8px); }
+  82%  { transform: translate(209.1px, -65.6px); }
+  83%  { transform: translate(211.65px, -66.4px); }
+  84%  { transform: translate(214.2px, -67.2px); }
+  85%  { transform: translate(216.75px, -68px); }
+  86%  { transform: translate(219.3px, -68.8px); }
+  87%  { transform: translate(221.85px, -69.6px); }
+  88%  { transform: translate(224.4px, -70.4px); }
+  89%  { transform: translate(226.95px, -71.2px); }
+  90%  { transform: translate(229.5px, -72px); opacity: 1; }
+  91%  { transform: translate(232.05px, -72.8px); opacity: 0.9; }
+  92%  { transform: translate(234.6px, -73.6px); opacity: 0.8; }
+  93%  { transform: translate(237.15px, -74.4px); opacity: 0.7; }
+  94%  { transform: translate(239.7px, -75.2px); opacity: 0.6; }
+  95%  { transform: translate(242.25px, -76px); opacity: 0.5; }
+  96%  { transform: translate(244.8px, -76.8px); opacity: 0.4; }
+  97%  { transform: translate(247.35px, -77.6px); opacity: 0.3; }
+  98%  { transform: translate(249.9px, -78.4px); opacity: 0.2; }
+  99%  { transform: translate(252.45px, -79.2px); opacity: 0.1; }
+  100% { transform: translate(255px, -80px); opacity: 0; }
+} 
+
+.serviceList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 5px;
+}
+
+/* Needed for smooth transition */
+@property --fill {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+/* Outer wrapper manages the ring */
+.serviceWrapper {
+  position: relative;
+  width: 50%;
+  transition: --fill 0.3s ease-in-out;
+  --fill: 0%;
+}
+
+.serviceWrapper:hover {
+  --fill: 100%;
+}
+
+/* Conic gradient ring outside the box */
+.serviceWrapper::before {
+  content: "";
+  position: absolute;
+  inset: -5px; /* Adjust size of ring */
+  border-radius: 25px; /* Slightly bigger than .service */
+  background: conic-gradient(
+    from 0deg,
+    #ff4d00 var(--fill),
+    transparent var(--fill)
+  );
+  z-index: 0;
+  transition: --fill 0.05s ease-in-out;
+}
+
+/* Actual content box */
+.service {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #2f213f;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.serviceIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceIcon img {
+  width: 24px;
+  height: 24px;
+}
+
+.serviceInfo h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.serviceInfo h3 {
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "American Typewriter", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+}
+
+.service:nth-child(1) .serviceIcon {
+  background-color: #dd4c62;
+}
+.service:nth-child(2) .serviceIcon {
+  background-color: #025656;
+}
+.service:nth-child(3) .serviceIcon {
+  background-color: #6c5c0c;
+}
+
+.counterList {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-left: 24px;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.counter h1 {
+  font-size: 48px;
+  color: #dd4c62;
+}
+
+.counter p {
+  font-size: 14px;
+  width: 120px;
+}
+
+@media (max-width: 1536px) {
+  .service,
+  .counterList {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .sTitle {
+    font-size: 128px;
+  }
+
+  .service {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sTitle {
+    font-size: 48px;
+  }
+
+  .service,
+  .counterList {
+    width: 100%;
+  }
+
+  .sTitle {
+    font-size: 48px;
+  }
+
+  .sLottie {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sSection {
+    width: 100%;
+  }
+
+  .sSection.right {
+    display: none;
+  }
+
+  .sTitleContainer {
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .sLottie {
+    margin-bottom: 0;
+  }
+}
