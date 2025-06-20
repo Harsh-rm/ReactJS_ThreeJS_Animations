@@ -79,6 +79,7 @@
   width: 40%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 24px;
 }
 
@@ -92,6 +93,10 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 1.8;
+  max-width: 695px;
+  overflow-wrap: break-word;
+  word-break: break-word;  
+  white-space: normal;
 }
 
 .pText button {
@@ -101,6 +106,75 @@
   border: none;
   font-weight: 500;
   cursor: pointer;
+}
+
+.title-offset {
+  width: 100%;
+}
+
+.title-1 {
+  margin-top: -20px;
+}
+
+.title-2 {
+  margin-top: -20px;
+}
+
+.title-3 {
+  margin-top: -20px;
+}
+
+.title-4 {
+  margin-top: -20px;
+}
+
+.title-5 {
+  margin-top: -20px;
+}
+
+.sentence-span {
+  display: inline-block;
+  margin-right: 20px; /* adjust for sentence spacing */
+}
+
+.sentence-block {
+  display: block;
+  margin-top: 16px; /* or 1.5rem or whatever spacing you prefer */
+}
+
+.sentence-block:first-child {
+  margin-top: 0; /* no space above the first block */
+}
+
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* align button to left */
+}
+
+.button-wrapper button {
+  margin-top: 0; /* base case */
+}
+
+/* Per-item offsets (these only affect the button, not the layout above) */
+.button-offset-1 button {
+  margin-top: 120px;
+}
+
+.button-offset-2 button {
+  margin-top: 50px;
+}
+
+.button-offset-3 button {
+  margin-top: 80px;
+}
+
+.button-offset-4 button {
+  margin-top: 20px;
+}
+
+.button-offset-5 button {
+  margin-top: 100px;
 }
 
 @media (max-width: 1536px) {
