@@ -78,9 +78,15 @@ const Hero = () => {
             “When you write a program, think of it primarily as a work of literature… You’re trying to write something that human beings are going to read.”
           </motion.p>
 
+          <motion.p style={{ marginBottom: '1rem' }} variants={descriptionVariants}>
+            Speaking of reading, treat this site as a digital book of my 
+            <span className="block">professional journey and turn the pages using your mouse or </span>
+            <span className="block"> the arrows of your keyboard for the best experience.</span>
+          </motion.p>
+
           <motion.p variants={descriptionVariants}>
-            Feel free to connect with me on LinkedIn. The fastest way to
-            <span className="block">reach  me is by shooting a text on the contact page.</span>
+            Feel free to connect with me on LinkedIn. The fastest way
+            <span className="block">to reach  me is by shooting a text on the contact page.</span>
           </motion.p>
 
         </motion.div>

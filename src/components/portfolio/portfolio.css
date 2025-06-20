@@ -5,7 +5,7 @@
 
 .pList {
   position: sticky;
-  top: 0;
+  top: 0px;
   display: flex;
   height: 100vh;
   width: max-content;
@@ -18,7 +18,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 80px;
+  padding-top: 60px;
 }
 
 /* .pItem:nth-child(1) {
@@ -59,12 +60,12 @@
   width: 80px;
   height: 80px;
   left: 0;
-  bottom: 80%;
+  bottom: 82%;
 }
 
 .pImg {
   width: 40%;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -83,15 +84,19 @@
 
 .pText h1 {
   font-size: 56px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 200;
 }
 
 .pText p {
   font-weight: 300;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 .pText button {
-  background-color: pink;
-  padding: 12px;
+  background-color: red;
+  padding: 10px;
   border-radius: 10px;
   border: none;
   font-weight: 500;
