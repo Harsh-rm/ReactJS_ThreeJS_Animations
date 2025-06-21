@@ -151,7 +151,10 @@ const ListItem = ({ item }) => {
 
 const Portfolio = () => {
   const [containerDistance, setContainerDistance] = useState(0);
+  const [showProgress, setShowProgress] = useState(false);
+
   const ref = useRef(null);
+  const isPortfolioInView = useInView(ref, { once: false });
 
   // useEffect(() => {
   //   if (ref.current) {
@@ -180,6 +183,13 @@ const Portfolio = () => {
 
   const { scrollYProgress } = useScroll({ target: ref });
 
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on("change", (v) => {
+      setShowProgress(v > 0 && v < 1);
+    });
+    return () => unsubscribe();
+  }, [scrollYProgress]);
+
   const xTranslate = useTransform(
     scrollYProgress,
     [0, 1],
@@ -205,28 +215,30 @@ const Portfolio = () => {
       <section />
       <section />
       <section />
-      <div className="pProgress">
-        <svg width="100%" height="100%" viewBox="0 0 160 160">
-          <circle
-            cx="80"
-            cy="80"
-            r="70"
-            fill="none"
-            stroke="#ddd"
-            strokeWidth={20}
-          />
-          <motion.circle
-            cx="80"
-            cy="80"
-            r="70"
-            fill="none"
-            stroke="#dd4c62"
-            strokeWidth={20}
-            style={{ pathLength: scrollYProgress }}
-            transform="rotate(-90 80 80)"
-          />
-        </svg>
-      </div>
+      {showProgress && (
+        <div className="pProgress">
+          <svg width="100%" height="100%" viewBox="0 0 160 160">
+            <circle
+              cx="80"
+              cy="80"
+              r="70"
+              fill="none"
+              stroke="#ddd"
+              strokeWidth={20}
+            />
+            <motion.circle
+              cx="80"
+              cy="80"
+              r="70"
+              fill="none"
+              stroke="#dd4c62"
+              strokeWidth={20}
+              style={{ pathLength: scrollYProgress }}
+              transform="rotate(-90 80 80)"
+            />
+          </svg>
+        </div>
+      )}
     </div>
   );
 };

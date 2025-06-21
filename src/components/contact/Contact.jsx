@@ -65,11 +65,11 @@ const Contact = () => {
             Try out this hassle-free contact form   
           </motion.h1>
           <motion.div variants={listVariant} className="formItem">
-            <label>Name</label>
+            <label>Name*</label>
             <input type="text" name="user_username" placeholder="Jane Doe" />
           </motion.div>
           <motion.div variants={listVariant} className="formItem">
-            <label>Email</label>
+            <label>Email*</label>
             <input
               type="email"
               name="user_email"
@@ -79,16 +79,16 @@ const Contact = () => {
           <motion.div variants={listVariant} className="formItem">
             <label>Message</label>
             <textarea
-              rows={10}
+              rows={8}
               name="user_message"
-              placeholder="Feel free to send a message..."
+              placeholder="Feel free to send me a message..."
             ></textarea>
           </motion.div>
           <motion.button variants={listVariant} className="formButton">
             Send
           </motion.button>
-          {success && <span>Your message has been sent!</span>}
-          {error && <span>Something went wrong!</span>}
+          {success && <span>Congrats 👏, Your message has been sent!</span>}
+          {error && <span>Oops, Something went wrong! Try sending a message on LinkedIn 😊</span>}
         </motion.form>
       </div>
       <div className="cSection"><ContactSvg/></div>

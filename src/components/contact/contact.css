@@ -20,11 +20,17 @@
   border-radius: 50% 0px;
 }
 
+.cTitle {
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
+}
+
 form {
   width: 80%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   background-color: rgba(2, 2, 45, 0.066);
   padding: 50px;
   border-radius: 50px;
@@ -32,29 +38,53 @@ form {
 
 input,
 textarea {
-  padding: 12px;
+  padding: 14px;
   border: none;
   border-radius: 5px;
+  color: black;
 }
 
 .formItem {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: black;
+  color: white;
 }
 
 label {
-  font-size: 13px;
+  font-size: 18px;
 }
 
 .formButton {
-  background-color: #dd4c62;
+  display: inline-block;
+  background: linear-gradient(90deg, red, red, darkorange, red);
+  background-size: 300% 100%;
+  animation: gradientFlowRTL 4s linear infinite;
+
   color: white;
   padding: 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  font-weight: 400;
+  font-size: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.formButton:hover {
+  animation: none;
+  background: red;
+  filter: saturate(0.9);
+  transform: scale(1.02);
+}
+
+@keyframes gradientFlowRTL {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 @media (max-width: 1280px) {

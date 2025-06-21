@@ -257,8 +257,8 @@ const Hero = () => {
         <div className="absolute top-0 left-0 w-full h-full z-3 pointer-events-none">
           <Canvas className="w-full h-full">
             <Suspense fallback={null}>
-              <FlyingPlane startY={6.6} startZ={-4} speed={0.095} size={270} />
-              <FlyingPlane startY={6.2} startZ={-5} speed={0.09} size={360} />
+              <FlyingPlane startY={6.6} startZ={-4} speed={0.075} size={270} />
+              <FlyingPlane startY={6.2} startZ={-5} speed={0.07} size={360} />
             </Suspense>
           </Canvas>
         </div>
