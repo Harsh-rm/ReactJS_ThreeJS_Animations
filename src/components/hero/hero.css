@@ -73,13 +73,13 @@
 .hSection.left {
   align-items: start;
   z-index: 5;
-  gap: 60px;
+  gap: 50px;
 }
 
 .hSection.right {
   align-items: end;
   z-index: 5;
-  gap: 70px;
+  gap: 55px;
 }
   
 .hTitle {
