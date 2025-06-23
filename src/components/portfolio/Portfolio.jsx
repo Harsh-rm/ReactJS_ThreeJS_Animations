@@ -7,7 +7,7 @@ const items = [
     id: 1,
     img: "/p1.png",
     title: "Spark Stream-Engine and Player Performance Charts",
-    desc: "Developing a low‑latency, secure streaming pipeline on AWS—optimising encoder configuration, edge-to-cloud ingestion, and failover mechanisms to improve reliability and user experience during live gameplay streams.",
+    desc: "Developing a low‑latency, secure streaming pipeline on AWS—optimising encoder configuration, edge-to-cloud ingestion, and failover mechanisms to improve reliability and user experience during live gameplay streams.| Enhancing live capture to directly ingest from approximately 50 mobile clients daily, integrating AWS Kinesis Video Streams with WebRTC to reduce end-to-end latency by about 30%.| Integrated 25+ React.js components in a Vite‑powered frontend, delivering real‑time charts and overlays consumed by 100+ coaches, scouts, and parents on our platform.",
     link: "https://www.sparkmysport.com/",
   },
   {
@@ -198,6 +198,15 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio container" ref={ref}>
+      <motion.h1
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="portfolioHeading"
+      >
+        Overview of My Work Experience
+      </motion.h1>
+      
       <motion.div className="pList" style={{ x: xTranslate }}>
         <div
           className="empty"

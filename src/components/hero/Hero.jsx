@@ -1,12 +1,12 @@
 import { Canvas } from "@react-three/fiber";
 import "./hero.css";
 import Speech from "./Speech";
-//import { motion } from "motion/react";
 import { motion } from "framer-motion";
 import Shape from "./Shape";
 import FlyingPlane from "./FlyingPlane";
 import TiltWrapper from "./TiltWrapper";
 import { Suspense } from "react";
+import CertificateCarousel from "./CertificateCarousel";
 
 const descriptionVariants = {
   initial: {
@@ -175,23 +175,26 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="certificate"
         >
-        <TiltWrapper>
-          <img src="/NodeJS_Developer_Certificate.png" alt="Certificate" />
-        </TiltWrapper>
+          <CertificateCarousel />
         </motion.div>
+
         {/* SPEECH BUBBLE */}
         <Speech />
+
         {/* CONTACT BUTTON */}
-        <motion.a
-          href="/#contact"
+        <motion.div
           className="contactLink"
+          onClick={() => {
+            const contactSection = document.getElementById("contact");
+            if (contactSection) {
+              contactSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
           animate={{
             x: [200, 0],
             opacity: [0, 1],
           }}
-          transition={{
-            duration: 2,
-          }}
+          transition={{ duration: 2 }}
         >
           <motion.div
             className="contactButton"
@@ -243,7 +246,7 @@ const Hero = () => {
               </svg>
             </div>
           </motion.div>
-        </motion.a>
+        </motion.div>
       </div>
       <div className="bg">
           <Canvas className="shapeCanvas z-0">

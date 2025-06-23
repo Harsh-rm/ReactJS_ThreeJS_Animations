@@ -1,5 +1,4 @@
 import { TypeAnimation } from "react-type-animation";
-//import { motion } from "motion/react";
 import { motion } from "framer-motion";
 
 const Speech = () => {
@@ -15,12 +14,12 @@ const Speech = () => {
             1000,
             "I'm currently learning how to build RAG AI agents and use it automate dev processes in linux subsystems...",
             1000,
-            "Please try out my custom voice assistant by clicking this chat box!",
+            "This chat box will soon be my personal AI-Voice assitant!",
             1000,
           ]}
           wrapper="span"
           speed={80}
-          deletionSpeed={80}
+          deletionSpeed={100}
           // omitDeletionAnimation
           repeat={Infinity}
         />

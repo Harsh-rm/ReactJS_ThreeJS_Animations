@@ -57,9 +57,9 @@ label {
 
 .formButton {
   display: inline-block;
-  background: linear-gradient(90deg, red, red, darkorange, red);
+  background: linear-gradient(90deg, #dd4c62, #dd4c62, rgb(201, 53, 77), #dd4c62, #dd4c62);
   background-size: 300% 100%;
-  animation: gradientFlowRTL 4s linear infinite;
+  animation: gradientFlowRTL 2s linear infinite;
 
   color: white;
   padding: 20px;
@@ -73,8 +73,8 @@ label {
 
 .formButton:hover {
   animation: none;
-  background: red;
-  filter: saturate(0.9);
+  background: #04df04e1;
+  filter: saturate(1);
   transform: scale(1.02);
 }
 
