@@ -78,6 +78,18 @@ label {
   transform: scale(1.02);
 }
 
+.errorInput {
+  border: 2px solid #ff4d4d;
+  background-color: #fff5f5;
+  outline: none;
+}
+
+.errorText {
+  color: #ff4d4d;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
 @keyframes gradientFlowRTL {
   0% {
     background-position: 100% 0%;
